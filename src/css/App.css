@@ -1,0 +1,268 @@
+/** fonts **/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Roboto+Mono:wght@200;400;600&display=swap');
+
+
+/** main **/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-color: #631072;
+    background-image: linear-gradient(315deg, #311b3b 0%, #3d2f4d 100%);
+    color: rgb(39, 34, 51);
+
+}
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1.1em;
+}
+
+a:link {
+    color: #58d389;
+    transition: all 0.3s ease-in-out;
+}
+
+a:visited {
+    color: #58d389
+}
+
+a:hover {
+    opacity: 0.4;
+}
+
+
+/** app **/
+
+#root {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.app-container {
+    display: grid;
+    max-width: 680px;
+    min-width: 480px;
+    box-sizing: content-box;
+    grid-template-rows: auto;
+    padding: 30px;
+
+}
+
+.app-base {
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+
+/** app setters **/
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #58d389;
+}
+
+.app-logo {
+    font-size: 6rem;
+    color: #fcfcfc;
+    padding: 0;
+    margin-left: -10px;
+}
+
+.app-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    letter-spacing: .7rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+}
+
+.blue {
+    color: #8d58d3;
+    display: flex;
+}
+
+/** footer **/
+footer {
+    display: flex;
+    align-items: center;
+    color: #58d389;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+footer ion-icon {
+    font-size: 1.6rem;
+    padding: 7px
+}
+
+
+/** card **/
+
+.cc-base {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    width: 460px;
+    height: 230px;
+    background-color: rgb(16 16 16 / 30%);
+    /*background-image: linear-gradient(324deg, #adadad 0%, #ffffff 100%);*/
+    border-radius: 7px;
+    padding: 15px;
+    color: white;
+    box-shadow: 0px 60px 10px -40px rgb(0 0 0 / 15%);
+}
+
+.cc-grad,
+.amex-color,
+.visa-color,
+.mastercard-color {
+    background-image: linear-gradient(to right, rgb(8 8 8 / 59%) 0%, rgb(0 0 0 / 30%) 51%, rgb(0 0 0 / 47%) 100%);
+}
+
+.cc-grad,
+.amex-color,
+.visa-color,
+.mastercard-color {
+
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0px 60px 10px -40px rgb(0 0 0 / 30%);
+
+}
+
+.cc-grad:hover,
+.amex-color:hover,
+.visa-color:hover,
+.mastercard-color:hover {
+
+    background-position: right center;
+
+}
+
+
+.cc-number {
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.cc-val {
+    display: flex;
+}
+
+.cc-cvv-date {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cc-flag {
+    padding: 7px;
+    border-radius: 4px;
+}
+
+/** flags composition **/
+
+.visa-color {
+    background-color: #060a89;
+    background-image: linear-gradient(315deg, #060a89 0%, #8b72ff 100%);
+    color: white;
+}
+
+.mastercard-color {
+    background-color: #da4600;
+    background-image: linear-gradient(315deg, #da4600 0%, #ff970c 100%);
+
+}
+
+.amex-color {
+    background-color: #004796;
+    background-image: linear-gradient(315deg, #004796 0%, #74d9ff 100%);
+
+
+}
+
+.cc-invalid {
+    background-color: #525252;
+    background-image: linear-gradient(315deg, #525252 0%, #242424 100%);
+
+}
+
+.cc-invalid-info {
+    font-size: .9rem;
+    font-weight: lighter;
+    color: rgb(255, 255, 255)
+}
+
+.cc-invalid-card {
+    background-color: #c00000;
+    background-image: linear-gradient(315deg, #dd0000 0%, #ff4747 100%);
+    color: white;
+}
+
+/** form **/
+
+.cc-input {
+    font-family: 'Roboto Mono', sans-serif;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: white;
+    width: 100%;
+    border: none;
+    transition: all 0.5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cc-input:hover,
+.cc-input:focus {
+
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+
+    font-size: 1.3rem;
+    text-transform: lowercase;
+    color: rgb(187, 187, 187);
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+
+    font-size: 1.3rem;
+    text-transform: lowercase;
+    color: rgb(187, 187, 187);
+}
+
+::placeholder {
+
+    font-size: 1.3rem;
+    text-transform: lowercase;
+    color: rgb(187, 187, 187);
+}
