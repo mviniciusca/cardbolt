@@ -1,14 +1,18 @@
 # 💳 Cardbolt 
 
+<img aling="center" src="https://i.imgur.com/peHtcYG.png">
+
 ## ⚔️ Sobre 
 
 Cardbolt é um aplicativo em React validador de cartão de crédito, utiliza as bandeiras Mastercard, Visa e American Express.
 
 ## 🧪 Features
 
-- [ ] Validador Instantaneo com o resultado da análise do cartão;
-- [ ] Indicador de bandeira do cartão;
-- [ ] Status de Completo se o Cartão de Crédito for válido;
+- [x] Validador Instantaneo com o resultado da análise do cartão;
+- [x] Indicador de bandeira do cartão;
+- [x] Status de Aviso se o Cartão de Crédito for iválido;
+- [ ] Status de Aviso se o Cartão de Crédito for válido;
+- [ ] Reforço na validação permitindo apenas números, sem espaços, sem caracteres especiais, número máximo de caracteres ...;
 
 ## 🔨 Tecnologias
 
