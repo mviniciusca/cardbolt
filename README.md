@@ -1,6 +1,6 @@
 # 💳 Cardbolt 
 
-<p aling="center">
+<p align="center">
     <img src="https://i.imgur.com/tFuilwz.gif">
 </p>
 
