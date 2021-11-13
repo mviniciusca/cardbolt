@@ -19,12 +19,14 @@ function Main() {
         setCardNumber(ccNumberInput.target.value);
     }
 
-    // set the card flags using regex
-    const visa = new RegExp("^4[0-9]{0,16}$");
-    const amex = new RegExp("^3[47][0-9]{0,16}$");
-    const master = new RegExp("^5[1-5][0-9]{0,16}$");
-
     useEffect(() => {
+
+        // set the card flags using regex
+        const visa = new RegExp("^4[0-9]{0,16}$");
+        const amex = new RegExp("^3[47][0-9]{0,16}$");
+        const master = new RegExp("^5[1-5][0-9]{0,16}$");
+
+        // check if the card number is valid
         if (master.test(cardNumber)) {
             setCCMaster(true);
             setInvalidCard(false);
