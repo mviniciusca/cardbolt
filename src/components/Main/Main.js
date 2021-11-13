@@ -13,6 +13,11 @@ function Main() {
     // states for invalid card number
     const [invalidCard, setInvalidCard] = useState(false);
 
+    // setting valid card number
+    const [validCard, setValidCard] = useState(false);
+
+
+
 
     // get the data from the form
     const handleCardNumber = (ccNumberInput) => {
@@ -22,25 +27,42 @@ function Main() {
     useEffect(() => {
 
         // set the card flags using regex
-        const visa = new RegExp("^4[0-9]{0,16}$");
-        const amex = new RegExp("^3[47][0-9]{0,16}$");
-        const master = new RegExp("^5[1-5][0-9]{0,16}$");
+        const visa = new RegExp("^4[0-9]{0,15}$");
+        const amex = new RegExp("^3[47][0-9]{0,14}$");
+        const master = new RegExp("^5[1-5][0-9]{0,17}$");
 
         // check if the card number is valid
         if (master.test(cardNumber)) {
             setCCMaster(true);
             setInvalidCard(false);
+            if (cardNumber.length >= 16 && cardNumber.length <= 19) {
+                setValidCard(true);
+            } else {
+                setValidCard(false);
+            }
         } else if (visa.test(cardNumber)) {
             setCCVisa(true);
             setInvalidCard(false);
+            if (cardNumber.length === 16) {
+                setValidCard(true);
+            } else {
+                setValidCard(false);
+            }
         } else if (amex.test(cardNumber)) {
             setCCAmex(true);
             setInvalidCard(false);
+            setValidCard(true);
+            if (cardNumber.length === 16) {
+                setValidCard(true);
+            } else {
+                setValidCard(false);
+            }
         }
         else {
             setCCVisa(false);
             setCCMaster(false);
             setCCAmex(false);
+            setValidCard(false);
             if (cardNumber.length > 0) {
                 setInvalidCard(true);
             } else {
@@ -62,7 +84,13 @@ function Main() {
                     }>
                         <div className="cc-number">
                             <input placeholder="digite os números do seu cartão" className="cc-input" name="cardNumber" value={cardNumber} onChange={handleCardNumber} type="text" />
-                            {invalidCard ? <p className="cc-invalid-info">cartão inválido ou não aceito</p> : null}
+                            {invalidCard ? <p className="cc-invalid-info">cartão inválido</p> :
+                                validCard ? <p className="cc-invalid-info">cartão válido</p> :
+
+
+
+                                    null}
+
                         </div>
                         <div className="cc-name">John Doe</div>
                         <div className="cc-val">04/25</div>

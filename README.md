@@ -17,7 +17,7 @@ Você pode acessar o app rodando através do deploy feito no <a href="https://ca
 - [x] Validador Instantaneo com o resultado da análise do cartão;
 - [x] Indicador de bandeira do cartão;
 - [x] Status de Aviso se o Cartão de Crédito for iválido;
-- [ ] Status de Aviso se o Cartão de Crédito for válido;
+- [x] Status de Aviso se o Cartão de Crédito for válido;
 - [x] Reforço na validação permitindo apenas números, sem espaços, sem caracteres especiais, número máximo de caracteres ...;
 
 ## 🔨 Tecnologias
