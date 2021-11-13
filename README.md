@@ -37,7 +37,7 @@ Bibliotecas que me ajudam a montar e dar vida à este projeto
 
 ## 📌 Status do Projeto
 
-Em Desenvolvimento
+Concluído em: **13/11/2021** 🎉
 
 ## ⚡️ Autor 
 
