@@ -1,6 +1,8 @@
 # 💳 Cardbolt 
 
-<img aling="center" src="https://i.imgur.com/tFuilwz.gif">
+<p aling="center">
+    <img src="https://i.imgur.com/tFuilwz.gif">
+</p>
 
 ## ⚔️ Sobre 
 
