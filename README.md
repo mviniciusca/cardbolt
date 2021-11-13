@@ -1,6 +1,6 @@
 # 💳 Cardbolt 
 
-<img aling="center" src="https://i.imgur.com/peHtcYG.png">
+<img aling="center" src="https://i.imgur.com/tFuilwz.gif">
 
 ## ⚔️ Sobre 
 
@@ -12,7 +12,7 @@ Cardbolt é um aplicativo em React validador de cartão de crédito, utiliza as 
 - [x] Indicador de bandeira do cartão;
 - [x] Status de Aviso se o Cartão de Crédito for iválido;
 - [ ] Status de Aviso se o Cartão de Crédito for válido;
-- [ ] Reforço na validação permitindo apenas números, sem espaços, sem caracteres especiais, número máximo de caracteres ...;
+- [x] Reforço na validação permitindo apenas números, sem espaços, sem caracteres especiais, número máximo de caracteres ...;
 
 ## 🔨 Tecnologias
 

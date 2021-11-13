@@ -1,19 +1,16 @@
 import { useState, useEffect } from "react";
 
-
 function Main() {
 
     // card number state
     const [cardNumber, setCardNumber] = useState([]);
 
     //states for the card flags
-
     const [ccVisa, setCCVisa] = useState(false);
     const [ccMaster, setCCMaster] = useState(false);
     const [ccAmex, setCCAmex] = useState(false);
 
     // states for invalid card number
-
     const [invalidCard, setInvalidCard] = useState(false);
 
 
@@ -22,14 +19,19 @@ function Main() {
         setCardNumber(ccNumberInput.target.value);
     }
 
+    // set the card flags using regex
+    const visa = new RegExp("^4[0-9]{0,16}$");
+    const amex = new RegExp("^3[47][0-9]{0,16}$");
+    const master = new RegExp("^5[1-5][0-9]{0,16}$");
+
     useEffect(() => {
-        if (cardNumber[0] === "5") {
+        if (master.test(cardNumber)) {
             setCCMaster(true);
             setInvalidCard(false);
-        } else if (cardNumber[0] === "4") {
+        } else if (visa.test(cardNumber)) {
             setCCVisa(true);
             setInvalidCard(false);
-        } else if (cardNumber[0] === "3") {
+        } else if (amex.test(cardNumber)) {
             setCCAmex(true);
             setInvalidCard(false);
         }
@@ -45,17 +47,15 @@ function Main() {
 
         }
     }, [cardNumber]);
-
     return (
         <>
             <section>
                 <div className="app-base">
-
                     <div className={
                         ccVisa ? "cc-base visa-color" :
                             ccMaster ? "cc-base  mastercard-color" :
                                 ccAmex ? "cc-base  amex-color" :
-                                    invalidCard ? "cc-base  animate__animated animate__shakeX cc-invalid-card" :
+                                    invalidCard ? "cc-base animate__animated animate__shakeX cc-invalid-card" :
                                         "cc-base animate__animated animate__fadeIn "
                     }>
                         <div className="cc-number">
@@ -86,11 +86,9 @@ function Main() {
 
                         </div>
                     </div>
-
                 </div>
             </section>
         </>
     );
 }
-
 export default Main;

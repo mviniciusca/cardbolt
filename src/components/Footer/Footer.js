@@ -6,7 +6,7 @@ class Footer extends Component {
             <footer>
                 <div className="footer-content">
                     <ion-icon name="code-outline"></ion-icon>
-                    <span> marcos coelho</span>
+                    <span> marcos coelho </span>
                     <a href="https://github.com/mviniciusca/cardbolt">
                         <ion-icon name="logo-github"></ion-icon>
                     </a>
